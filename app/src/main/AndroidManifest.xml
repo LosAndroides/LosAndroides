@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LosAndroides">
         <activity
-            android:name=".presentation.provisional.ProvisionalMainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.LosAndroides">
             <intent-filter>

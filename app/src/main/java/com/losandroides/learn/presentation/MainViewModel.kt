@@ -22,7 +22,7 @@ class MainViewModel @Inject constructor(
         getItems()
     }
 
-    private val _viewState = MutableStateFlow<ViewState>(ViewState.Content())
+    private val _viewState = MutableStateFlow<ViewState>(ViewState.Loading)
     val viewState: StateFlow<ViewState> = _viewState
 
     private fun getItems() {
@@ -40,6 +40,7 @@ class MainViewModel @Inject constructor(
 
     sealed class ViewState {
         object Error : ViewState()
+        object Loading : ViewState()
         data class Content(val items: List<Item> = emptyList()) : ViewState()
     }
 }
